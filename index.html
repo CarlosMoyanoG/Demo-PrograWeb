@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML5: Semántica - Formularios - Contenido Adaptable</title>
+</head>
+
+<body>
+
+  <!-- ENCABEZADO -->
+  <header role="banner">
+    <h1> Demo HTML5 </h1>
+    <p class="hint">Estructura semántica + formularios nativos + contenido adaptable</p>
+  </header>
+
+  <!-- NAVEGACION -->
+  <nav aria-label="Principal">
+    <a href="#contenido">Ir al contenido</a> ·
+    <a href="#form">Formulario</a> ·
+    <a href="#media">Imagen adaptable</a>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main id="contenido" role="main" class="layout">
+    <article>
+      <h2>1) Estructura semántica</h2>
+        <p>
+          En lugar de <code>&lt;div&gt;</code> genéricos, HTML5 introduce
+          landmarks como <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+          <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code> y
+          <code>&lt;footer&gt;</code>. Esto mejora accesibilidad, SEO y mantenimiento.
+        </p>
+
+        <details>
+          <summary>Ver código semántico (toggle nativo)</summary>
+          <pre>
+            <code>&lt;main&gt;
+              &lt;article&gt;...&lt;/article&gt;
+              &lt;aside&gt;...&lt;/aside&gt;
+            &lt;/main&gt;</code>
+          </pre>
+        </details>
+
+      <h2 id="form">2) Form nativo con validación</h2>
+      <form onsubmit="event.preventDefault(); alert('Formulario válido');">
+        <label for="email">Email (validación nativa)</label>
+        <input id="email" name="email" type="email" required placeholder="nombre@ejemplo.com" />
+
+        <label for="dni">ID (patrón: 2 letras + 4 dígitos, p.ej. AB1234)</label>
+        <input id="dni" name="dni" type="text" pattern="[A-Za-z]{2}[0-9]{4}" required />
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <h2 id="media">3) Contenido adaptable con &lt;picture&gt;</h2>
+        <p>La imagen cambia según el ancho de pantalla (sin JS):</p>
+        <picture>
+          <source srcset="logoGrande.png" media="(min-width: 800px)">
+          <img src="logoPequeño.png" alt="Logo de la Universidad como ejemplo" width="70%">
+        </picture>
+    </article>
+
+    <aside aria-label="Notas">
+      <h3>Por qué esto demuestra HTML5</h3>
+      <ul>
+        <li><strong>Semántica:</strong> Landmarks accesibles y estructura clara.</li>
+        <li><strong>Form nativo:</strong> Validación, tipos de input y patrones sin librerías.</li>
+        <li><strong>Media adaptable:</strong> <code>&lt;picture&gt;</code> selecciona recursos por media queries.</li>
+        <li><strong>Interacción nativa:</strong> <code>&lt;details&gt;</code>/<code>&lt;summary&gt;</code> para disclosure.</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer role="contentinfo">
+    <small>Pagina realizada como demostracion de HTML5 para la clase de Programacion Web</small>
+  </footer>
+
+  <style>
+    body 
+    { 
+        font-family: system-ui, sans-serif; 
+        line-height: 1.5; 
+        margin: 0; 
+    }
+
+    header, nav, main, aside, footer 
+    { 
+        padding: 1rem; 
+    }
+
+    header, footer 
+    { 
+        background: #b2851d; 
+        color: white; 
+    }
+    
+    nav 
+    { 
+        background: #e2e8f0; 
+    }
+
+    .layout 
+    { 
+        display: grid; 
+        grid-template-columns: 1fr; 
+        gap: 1rem; 
+    }
+
+    @media (min-width: 800px) 
+    {
+      .layout { grid-template-columns: 2fr 1fr; }
+    }
+
+    article, aside 
+    { 
+        background: #f8fafc; 
+        border: 1px solid #e5e7eb; 
+        border-radius: 12px; 
+        padding: 1rem; 
+    }
+
+    label 
+    { 
+        display: block; 
+        margin-top: .5rem; 
+    }
+
+    input, button 
+    { 
+        font-size: 1rem; padding: .5rem; 
+    }
+
+    .hint 
+    { 
+        font-size: .9rem; color: #323232; 
+    }
+
+    a 
+    { 
+        color: #076895; 
+    }
+
+    button 
+    { 
+        background: #0ea5e9; 
+        color: #fff; border: 0; 
+        border-radius: 8px; 
+        cursor: pointer; 
+    }
+
+    button:focus 
+    { 
+        outline: 3px solid #facc15; 
+    }
+
+    form button {
+      display: block;
+      margin-top: 0.75rem;
+    }
+  </style>
+
+</body>
+
+</html>
