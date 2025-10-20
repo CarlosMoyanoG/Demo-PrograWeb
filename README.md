@@ -12,7 +12,7 @@ HTML5 es relevante porque convierte el navegador en una plataforma de aplicacion
 
 ---
 
-## 🔑 Conceptos clave (3–5)
+## Conceptos clave (3–5)
 
 Semántica: Etiquetas como `<header>`, `<nav>`, `<main>` que dan significado al contenido 
 Validación nativa: Inputs como `type="email"` o atributos como `pattern` permiten validar sin JS
@@ -22,7 +22,7 @@ Interacción nativa: Elementos como `<details>` y `<summary>` permiten mostrar/o
 
 ---
 
-## 🔗 Enlace + breve explicación del ejemplo
+## Enlace + breve explicación del ejemplo
 
 El siguiente ejemplo demuestra el uso de HTML5 de forma práctica: 
 **Enlace al código:**  https://github.com/CarlosMoyanoG/Demo-PrograWeb
@@ -34,7 +34,7 @@ En este ejemplo se muestran tres capacidades claves de HTML5:
 
 ---
 
-## 💻 Compatibilidad y limitaciones (alto nivel)
+## Compatibilidad y limitaciones (alto nivel)
 
 Semántica
 - Compatibilidad: Todos los navegadores modernos 
@@ -54,10 +54,14 @@ Validación Nativa:
 
 ---
 
-## 📚 Fuentes oficiales
+## Fuentes oficiales
 
 - MDN Web Docs – HTML5: https://developer.mozilla.org/en-US/docs/Glossary/HTML5
 - WHATWG HTML Living Standard: https://html.spec.whatwg.org/
+- Elementos semánticos HTML5 explicados: https://www.freecodecamp.org/espanol/news/elementos-semanticos-html5-explicados/
+- Desarrollo Web: 5 Buenas Prácticas para Escribir Código HTML, CSS y JavaScript de Calidad: https://cursos.frogamesformacion.com/pages/blog/desarrollo-web-5-buenas-pr%C3%A1cticas-para-escribir-c%C3%B3digo-html-css-y-javascript-de-calidad
+- HTML5, estructura básica y elementos semánticos: https://www.eniun.com/html5-estructura-basica-elementos-semanticos/
+- Lenguaje HTML - HTML en español: https://lenguajehtml.com/html/
 
 ---
 
